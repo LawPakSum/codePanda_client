@@ -1,11 +1,11 @@
 import React from 'react';
-import Item_Filter from '../../Components/Item_Filter';
+import ItemFilter from '../../Components/ItemFilter';
 import SingleItemRow from '../../Components/SingleItemRow';
 
 function Record() {
   return (
     <div>
-        <Item_Filter></Item_Filter>
+        <ItemFilter></ItemFilter>
         <div className='records_page page_main'>
             <div className='records_items'>
                 <div className='single_item'>

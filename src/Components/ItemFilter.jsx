@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Item_Filter() {
+function ItemFilter() {
   return (
     <div className='filter'>
-
+        <div>item filter</div>
     </div>
   );
 }
 
-export default Item_Filter;
+export default ItemFilter;

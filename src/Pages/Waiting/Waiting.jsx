@@ -1,10 +1,10 @@
 import React from 'react';
-import Item_Filter from '../../Components/Item_Filter';
+import ItemFilter from '../../Components/ItemFilter';
 import   SingleItemRow from '../../Components/SingleItemRow';
 function Waiting() {
   return (
     <div>
-        <Item_Filter></Item_Filter>
+        <ItemFilter></ItemFilter>
         <div className='waiting_page page_main'>
             <div className='waiting_items'>
                 <div className='waiting_single_item'>

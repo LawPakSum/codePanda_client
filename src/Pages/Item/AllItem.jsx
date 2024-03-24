@@ -1,11 +1,11 @@
 import React from 'react';
 import SingleItemRow from '../../Components/SingleItemRow';
-import Item_Filter from '../../Components/Item_Filter';
+import ItemFilter from '../../Components/ItemFilter';
 
 function AllItem() {
   return (
     <div>
-        <Item_Filter></Item_Filter>
+        <ItemFilter></ItemFilter>
         <div className='items_page page_main'>
             <div className='items'>
                 <div className='single_item'>
