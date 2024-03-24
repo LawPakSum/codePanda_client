@@ -7,8 +7,8 @@ function SingleItemRow() {
         <div className='item_detail'>
             <div className='item_name'></div>
             <div className='item_classification'></div>
-            <div className='item_style'></div>
-            <div className='item_borrow'></div>
+            <div className='item_playstyle'></div>
+            <div className='item_borrow_status'></div>
             <div className='item_condition'></div>
             <div className='item_remark'></div>
         </div>

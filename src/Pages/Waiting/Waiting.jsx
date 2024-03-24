@@ -1,6 +1,6 @@
 import React from 'react';
 import ItemFilter from '../../Components/ItemFilter';
-import   SingleItemRow from '../../Components/SingleItemRow';
+import SingleItemRow from '../../Components/SingleItemRow';
 function Waiting() {
   return (
     <div>
