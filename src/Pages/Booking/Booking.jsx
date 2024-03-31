@@ -25,9 +25,8 @@ function Waiting() {
                   // let userBookingInfo
                   return(
                     <div className='waiting_single_item' key={index}>
-                      <BookingRow info={instrumentBooking}></BookingRow>
-                      <div className='waiting_item_queue'>queue no.:</div>
-                      <div className='waiting_item_giveup_button'>giveup</div>
+                      <BookingRow info={instrumentBooking}></BookingRow>                      
+                      <div className='waiting_item_giveup_button'>Cancel</div>
                     </div> 
                   )
                 })
