@@ -4,7 +4,7 @@ import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import UserHeader from '../Components/UserHeader';
 import AllItem from '../Pages/Item/AllItem';
 import Record from '../Pages/Record/Record';
-import Waiting from '../Pages/Waiting/Waiting';
+import Booking from '../Pages/Booking/Booking';
 import Logout from '../Pages/Login/Logout';
 
 function UserRouter() {
@@ -18,7 +18,7 @@ function UserRouter() {
         <Route path='/home' element={<Main/>}/>
         <Route path='/items' element={<AllItem/>}/>
         <Route path='/records' element={<Record/>}/>
-        <Route path='/waiting' element={<Waiting/>}/>
+        <Route path='/booking' element={<Booking/>}/>
         <Route path='/logout' element={<Logout/>}/>
       </Routes>
     </Router>
