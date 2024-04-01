@@ -16,4 +16,16 @@ function makeBooking(user_id, instrument_id, booking_from, booking_to){
     })
 }
 
-export {makeBooking};
+function cancelBooking(booking_id){
+    let cancelBookingUrl = process.env.REACT_APP_SERVER_URL+"/cancelBooking";
+    let booking = {
+        booking_id:booking_id
+    }
+    axios.post(cancelBookingUrl, {
+        booking
+    },[]).catch((error)=>{
+        console.log(error);
+    },[])
+}
+
+export {makeBooking, cancelBooking};
