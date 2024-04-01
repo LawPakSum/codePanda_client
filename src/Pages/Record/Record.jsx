@@ -1,19 +1,42 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import ItemFilter from '../../Components/ItemFilter';
-import SingleItemRow from '../../Components/SingleItemRow';
+import RecordRow from '../../Components/RecordRow';
+import axios from 'axios';
 
 function Record() {
+
+  const [records, setRecords] = useState([]);
+
+  useEffect(()=>{
+    const itemUrl = process.env.REACT_APP_SERVER_URL+"/getRecordInfo";
+    let userId = 2;
+    axios.get(itemUrl).then((response)=>{
+      var targetRecords = [];
+      response.data.map((record)=>{
+        if(record.user.user_id === userId){
+          targetRecords.push(record);
+        }
+      })
+      setRecords(targetRecords);
+    },[]).catch((error)=>{
+      console.log(error);
+    },[])
+  },[])
+
   return (
     <div>
         <ItemFilter></ItemFilter>
         <div className='records_page page_main'>
             <div className='records_items'>
-                <div className='single_item'>
-                    <SingleItemRow></SingleItemRow>
-                    <div className='records_item_from'>From:</div>
-                    <div className='records_item_to'>To:</div>
-                    <div className='records_item_status'>Status:</div>
-                </div> 
+              {
+                records.map((record, index)=>{
+                  return(
+                    <div className='single_item' key={index}>
+                    <RecordRow info={record}></RecordRow>
+                  </div> 
+                  )
+                })
+              }
             </div>
         </div>
     </div>

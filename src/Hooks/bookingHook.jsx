@@ -11,8 +11,6 @@ function makeBooking(user_id, instrument_id, booking_from, booking_to){
     }
     axios.post(makeBookingUrl, {
         booking
-    }).then((response)=>{
-        return response.data;
     }).catch((error)=>{
         console.log(error);
     })
