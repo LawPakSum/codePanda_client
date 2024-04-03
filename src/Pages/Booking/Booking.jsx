@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ItemFilter from '../../Components/ItemFilter';
 import BookingRow from '../../Components/BookingRow';
+import {cancelBooking} from '../../Hooks/BookingHook'
 import axios from 'axios';
 function Waiting() {
   const [instrumentBookings, setInstrumentBookings] = useState([]);
@@ -26,7 +27,9 @@ function Waiting() {
                   return(
                     <div className='waiting_single_item' key={index}>
                       <BookingRow info={instrumentBooking}></BookingRow>                      
-                      <div className='waiting_item_giveup_button'>Cancel</div>
+                      {instrumentBooking.booking_status==="canceled" || instrumentBooking.booking_to < new Date() || instrumentBooking.picked !== "yes"?
+                        "":<div className='waiting_item_giveup_button' onClick={()=>{cancelBooking(instrumentBooking.booking_id)}}>Cancel</div>                      
+                      }
                     </div> 
                   )
                 })
