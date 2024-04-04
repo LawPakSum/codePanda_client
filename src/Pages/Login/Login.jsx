@@ -1,9 +1,35 @@
+import axios from 'axios';
 import React, {useState} from 'react';
-
+import { useNavigate } from 'react-router-dom';
+import { useCookies } from 'react-cookie';
 function Login() {
 
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
+    const [cookies, setCookie, removeCookie] = useCookies();
+    const navigate = useNavigate()
+    var verifyLogin = ()=>{
+        const loginUrl = process.env.REACT_APP_SERVER_URL+"/verifyLogin";
+        axios.post(loginUrl, {
+            userName: username,
+            userPassword: password
+        }).then((response)=>{
+            if(response.data === "invalid"){
+                
+                removeCookie('identity', { path: '/', domain: 'localhost' });
+                removeCookie('user_id', { path: '/', domain: 'localhost' });
+                return navigate("/")
+            }
+            else{
+                const head = response.data.split("-")[0];
+                const tail = response.data.split("-")[1];
+                setCookie('identity', head,{path:"/"});
+                setCookie('user_id', tail, {path:"/"});
+                console.log(cookies.identity);
+                return navigate("/home")
+            }
+        },[])
+    }
 
   return (
     <div>
@@ -25,7 +51,7 @@ function Login() {
                     onChange={(e)=>{setPassword(e.target.value)}}
                 />
             </label>
-            <div className='login_button'>continue</div>
+            <div className='login_button' onClick={verifyLogin}>continue</div>
         </div>
     </div>
   );

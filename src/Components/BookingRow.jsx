@@ -15,14 +15,14 @@ function BookingRow(props) {
                 <div className='bookRow_name'></div>
             </div>
             <div className='bookRow_content'>
-                <div className='bookRow_from'>{(info.booking.booking_from).split('T')[0]}</div>
-                <div className='bookRow_to'>{(info.booking.booking_to).split('T')[0]}</div>
-                <div className='bookRow_status'>{info.booking.booking_status}</div>
-                <div className='bookRow_picked'>{info.booking.booking_picked}</div>
-                <div className='bookRow_name'>{info.instrument.instrument_name}</div>
-                <div className='bookRow_classification'>{info.instrument.instrument_classification}</div>
-                <div className='bookRow_condition'>{info.instrument.instrument_condition}</div>
-                <div className='bookRow_remark'>{info.instrument.instrument_remark}</div>
+                <div className='bookRow_from'>Booking from: {(info.booking.booking_from).split('T')[0]}</div>
+                <div className='bookRow_to'>Booking To:{(info.booking.booking_to).split('T')[0]}</div>
+                <div className='bookRow_status'>Status: {info.booking.booking_status}</div>
+                <div className='bookRow_picked'>Picked: {info.booking.picked}</div>
+                <div className='bookRow_name'>Name: {info.instrument.instrument_name}</div>
+                <div className='bookRow_classification'>Classification: {info.instrument.instrument_classification}</div>
+                <div className='bookRow_condition'>Condition: {info.instrument.instrument_condition}</div>
+                <div className='bookRow_remark'>Remark: {info.instrument.instrument_remark}</div>
             </div>
         </div>
     </div>

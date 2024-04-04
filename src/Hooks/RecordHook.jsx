@@ -12,4 +12,10 @@ function createRecord(booking_id){
     })
 }
 
-export {createRecord};
+function returnItem(record_id){
+    const returnItemUrl = process.env.REACT_APP_SERVER_URL+"/updateReturn";
+    axios.post(returnItemUrl, {record_id: record_id}).catch((error)=>{console.log(error)});
+
+}
+
+export {createRecord, returnItem};

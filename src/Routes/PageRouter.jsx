@@ -9,7 +9,7 @@ function PageRouter() {
         {/* to be continue
         <Route path='/'></Route>
         <Route path='/'></Route> */}
-        <Route path='/login' element={<Login/>}/>
+        <Route path='/' element={<Login/>}/>
       </Routes>
     </Router>
   )

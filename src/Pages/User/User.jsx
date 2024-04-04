@@ -14,7 +14,6 @@ function User() {
         },[]);
     },[])
 
-    useEffect(()=>{console.log(users)},[users])
   return (
     <div>
         {/*may be user filter*/}
@@ -22,9 +21,9 @@ function User() {
             <div className='users_create'>create</div>
             <div className='users_list'>
                 {
-                    users.map((user)=>{
+                    users.map((user, index)=>{
                         return(
-                            <UserRow user={user}></UserRow>
+                            <UserRow user={user} key={index}></UserRow>
                         )  
                     }, [])
                 }

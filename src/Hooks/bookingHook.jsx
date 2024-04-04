@@ -3,7 +3,7 @@ import axios from "axios";
 function makeBooking(user_id, instrument_id, booking_from, booking_to){
     let makeBookingUrl = process.env.REACT_APP_SERVER_URL+"/addBooking";
     let booking = {
-        user_id: user_id,
+        userId: user_id,
         instrument_id: instrument_id,
         booking_from: booking_from.toJSON(),
         booking_to: booking_to.toJSON(),
@@ -18,11 +18,8 @@ function makeBooking(user_id, instrument_id, booking_from, booking_to){
 
 function cancelBooking(booking_id){
     let cancelBookingUrl = process.env.REACT_APP_SERVER_URL+"/cancelBooking";
-    let booking = {
-        booking_id:booking_id
-    }
     axios.post(cancelBookingUrl, {
-        booking
+        booking_id: booking_id
     },[]).catch((error)=>{
         console.log(error);
     },[])
