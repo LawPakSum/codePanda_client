@@ -11,7 +11,6 @@ function AllItem() {
       axios.get(itemUrl).then((response)=>{
           const respData = response.data;
           setItems(respData);
-          
       },[]).catch((error)=>{
         console.log(error);
       });
@@ -32,10 +31,10 @@ function AllItem() {
                 instrument_remark: item.instrument_remark,
               };
               return(
-                <div className='single_item' key={index}>
+                item.instrument_remark!=="suspend"?<div className='single_item' key={index}>
                   <SingleItemRow info={info}></SingleItemRow>
                   <div className='item_borrow_button'>borrow</div>
-                </div> 
+                </div> :""
               )
             })                  
           }

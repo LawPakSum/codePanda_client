@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import {useLocation} from 'react-router-dom';
+
 function SingleUser(props) {
     const [exist, setExist] = useState(props.user.user_id?true:false);
     const [name, setName] = useState(props.user.user_name);
     const [password, setPassword] = useState(props.user.user_password);
     const [records, setRecords] = useState([]);
 
+    const location = useLocation();
     useEffect(()=>{
         const itemUrl = process.env.REACT_APP_SERVER_URL+"/getRecordInfo";
         const userId = props.user.user_id;

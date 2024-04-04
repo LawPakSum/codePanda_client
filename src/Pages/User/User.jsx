@@ -9,10 +9,13 @@ function User() {
         const userUrl = process.env.REACT_APP_SERVER_URL+"/getUsers";
         axios.get(userUrl).then((response)=>{
             setUsers(response.data);
+            
         },[]).catch((error)=>{
             console.log(error);
         },[]);
     },[])
+
+ 
 
   return (
     <div>

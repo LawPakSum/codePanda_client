@@ -1,6 +1,7 @@
 import axios from "axios"
 
 function createRecord(booking_id){
+    
     const record = {
         booking_id: booking_id,
         get_time: (new Date()).toJSON(),

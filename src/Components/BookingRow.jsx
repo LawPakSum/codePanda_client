@@ -2,11 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 function BookingRow(props) {
 
-    const [info, setInfo] = useState(props.info)
-
-    useEffect(()=>{
-        
-    })
+    const [info, setInfo] = useState(props.info);
   return (
     <div className='bookRow'>
         <div className='bookRow_icon'></div>

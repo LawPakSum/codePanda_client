@@ -3,14 +3,11 @@ import ItemFilter from '../../Components/ItemFilter';
 import BookingRow from '../../Components/BookingRow';
 import {cancelBooking} from '../../Hooks/BookingHook'
 import axios from 'axios';
-function Booking() {
+function AdminBooking() {
   const [instrumentBookings, setInstrumentBookings] = useState([]);
   useEffect(()=>{
-    let userId = 2;
-    let bookingUrl = process.env.REACT_APP_SERVER_URL+"/getBookingByUser";
-    axios.post(bookingUrl, {
-      user_id:userId
-    }).then((response)=>{
+    let bookingUrl = process.env.REACT_APP_SERVER_URL+"/getBookingByUsers";
+    axios.get(bookingUrl).then((response)=>{
       setInstrumentBookings(response.data);
     },[]).catch((error)=>{
       console.log(error);
@@ -40,4 +37,4 @@ function Booking() {
   );
 }
 
-export default Booking;
+export default AdminBooking;

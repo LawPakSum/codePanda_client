@@ -10,8 +10,8 @@ function SingleItemRow(props) {
         <div>
           <div className='singleItem_classification'>Classification: {info.instrument_classification}</div>
           <div className='singleItem_playstyle'>Playstyle: {info.instrument_playstyle}</div>
-          <div className='singleItem_borrow_status'>Borrow Status: {info.instrument_borrow_status}</div>
-          <div className='singleItem_condition'>Condition{info.instrument_condition}</div>
+          <div className='singleItem_borrow_status'>Borrow: Status: {info.instrument_borrow_status}</div>
+          <div className='singleItem_condition'>Condition: {info.instrument_condition}</div>
           <div className='singleItem_remark'>Remark:{info.instrument_remark}</div>
         </div>
       </div>

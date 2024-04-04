@@ -14,9 +14,6 @@ function UserRouter() {
     <Router>
       <UserHeader></UserHeader>
       <Routes>
-        {/* to be continue
-        <Route path='/'></Route>
-         */}
         <Route path='/home' element={<Main/>}/>
         <Route path='/items' element={<AllItem/>}/>
         <Route path='/records' element={<Record/>}/>
