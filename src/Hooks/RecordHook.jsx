@@ -8,7 +8,9 @@ function createRecord(booking_id){
         returned: "no"
     }
     let makeRecordUrl = process.env.REACT_APP_SERVER_URL+"/addRecord";
-    axios.post(makeRecordUrl, record).catch((error)=>{
+    axios.post(makeRecordUrl, record).then((response)=>{
+    
+    }).catch((error)=>{
         console.log(error);
     })
 }
@@ -16,7 +18,6 @@ function createRecord(booking_id){
 function returnItem(record_id){
     const returnItemUrl = process.env.REACT_APP_SERVER_URL+"/updateReturn";
     axios.post(returnItemUrl, {record_id: record_id}).catch((error)=>{console.log(error)});
-
 }
 
 export {createRecord, returnItem};

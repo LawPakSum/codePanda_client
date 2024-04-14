@@ -1,15 +1,33 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import UserFilter from '../../Components/UserFilter';
 import UserRow from '../../Components/UserRow';
 function User() {
 
     const [users, setUsers] = useState([]);
+    const [filters, setFilters] = useState({
+        id:"",
+        name:""
+    });
+    const [filterUsers, setFilterUsers] = useState([]);
+
+    //for filter
+    const updateFilter = (newFilter)=>{
+        setFilters(newFilter);
+    }
+
+    useEffect(()=>{
+        var temp = users;
+        temp = users.filter(i => (i.userName).startsWith(filters.name));
+        setFilterUsers(temp);
+    }, [filters])
+    //end filter
 
     useEffect(()=>{
         const userUrl = process.env.REACT_APP_SERVER_URL+"/getUsers";
         axios.get(userUrl).then((response)=>{
             setUsers(response.data);
-            
+            setFilterUsers(response.data)
         },[]).catch((error)=>{
             console.log(error);
         },[]);
@@ -19,12 +37,12 @@ function User() {
 
   return (
     <div>
-        {/*may be user filter*/}
+        <UserFilter updateFilter={updateFilter}></UserFilter>
         <div className='user_page page_main'>
             <div className='users_create'>create</div>
             <div className='users_list'>
                 {
-                    users.map((user, index)=>{
+                    filterUsers.map((user, index)=>{
                         return(
                             <UserRow user={user} key={index}></UserRow>
                         )  
