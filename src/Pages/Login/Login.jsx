@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCookies } from 'react-cookie';
+import "./Login.css";
 function Login() {
 
     const [username, setUsername] = useState("");
@@ -31,26 +32,34 @@ function Login() {
     }
 
   return (
-    <div>
-        <div className='login_container'>
-            <div className='login_title'>Login</div>
-            <label>
-                <div className='login_label'>username:</div>
-                <input 
-                    value={username}
-                    type='text'
-                    onChange={(e)=>{setUsername(e.target.value)}}
-                />
-            </label>
-            <label>
-                <div className='login_label'>password:</div>
-                <input
-                    value={password}
-                    type='password'
-                    onChange={(e)=>{setPassword(e.target.value)}}
-                />
-            </label>
-            <div className='login_button' onClick={verifyLogin}>continue</div>
+    <div className='login_page'>
+        <div className='left'>
+            <h1 className='welcome_message'>Welcome Back</h1>
+            <div className='login_guide'>Log in to your account using username and password</div>
+            <div className='login_container'>
+
+                <label>
+                    <input 
+                        placeholder='username'
+                        value={username}
+                        type='text'
+                        onChange={(e)=>{setUsername(e.target.value)}}
+                    />
+                </label>
+                <br/>
+                <label>
+                    <input
+                        placeholder="Password"
+                        value={password}
+                        type='password'
+                        onChange={(e)=>{setPassword(e.target.value)}}
+                    />
+                </label>
+                <div className='login_button' onClick={verifyLogin}>continue</div>
+            </div>
+        </div>
+        <div className='right'>
+
         </div>
     </div>
   );

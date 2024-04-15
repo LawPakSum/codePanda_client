@@ -1,0 +1,59 @@
+.login_page{
+    display: flex;
+    width: 100vw;
+}
+
+.right {
+    flex: 3;
+    background-image: url("../../Assets/Images/instrument.jpeg");
+    background-color: black;
+    transition: 1s;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    max-height: 100vh;
+}
+
+.left{
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items:flex-start; /* Vertical centering */
+    flex-direction: column;
+    padding-left:2%
+}
+
+.welcome_message {
+    color: purple; /* Change the color of the title to purple */
+}
+  
+.login_guide {
+    font-size: 15px; /* Adjust the font size to make it smaller */ 
+    padding-bottom: 5px;
+}
+
+.login_button {
+    background: linear-gradient(135deg, #8a2be2, #ff69b4);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center; /* Center align text */
+    /* Additional styles to center text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px; /* Adjust the width of the button */
+  }
+  
+  .login_button:hover {
+    background: linear-gradient(135deg, #ff69b4, #8a2be2); /* Reversed gradient on hover */
+  }
+
+  .login_container input {
+    padding: 10px 20px;
+    width: 300px; /* Adjust the width of the input fields */
+  }
+  
