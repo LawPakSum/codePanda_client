@@ -3,7 +3,7 @@ import SingleItemRow from '../../Components/SingleItemRow';
 import ItemFilter from '../../Components/ItemFilter';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-
+import './AdminItem.css';
 function AdminAllItem() {
     const [items, setItems] = useState([]);
     const [filterItems, setFilterItems] = useState([]);
@@ -45,7 +45,7 @@ function AdminAllItem() {
     }
 
     return (
-      <div>
+      <div className='main_body'>
         <ItemFilter updateFilter={updateFilter}></ItemFilter>
         <div className='items_page page_main'>
           <div className='add_instrument' onClick={()=>{navigate("/addItem")}}>

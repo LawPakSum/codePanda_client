@@ -11,9 +11,6 @@ function UserRow(props) {
                 <div className='userRow_name'>Name: {props.user.userName}</div>
                 <div className='userRow_identity'>Identity: {props.user.userIdentity}</div>
             </div>
-            <div className='userRow_button'>
-                detail
-            </div>
         </div>
     </div>
   );

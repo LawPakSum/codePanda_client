@@ -80,7 +80,7 @@ function AdminRecord() {
     userValueChange();
   },[userId])
   return (
-    <div>
+    <div className='main_body'>
         <RecordFilter updateRecordFilter={updateRecordFilter}></RecordFilter>
         <div className='records_page page_main'>
           <div className='record_create_record'>

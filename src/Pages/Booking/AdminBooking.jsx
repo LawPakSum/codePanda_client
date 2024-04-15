@@ -72,7 +72,7 @@ function AdminBooking() {
     })
   },[])
   return (
-    <div>
+    <div className='main_body'>
       <ItemFilter updateFilter={updateFilter}></ItemFilter>
       <BookingFilter updateBookingFilter={updateBookingFilter}></BookingFilter>
       <div className='waiting_page page_main'>

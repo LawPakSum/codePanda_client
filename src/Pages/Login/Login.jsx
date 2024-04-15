@@ -26,7 +26,7 @@ function Login() {
                 const tail = response.data.split("-")[1];
                 setCookie('identity', head,{path:"/"});
                 setCookie('user_id', tail, {path:"/"});
-                return navigate("/home")
+                return navigate("/")
             }
         },[])
     }
