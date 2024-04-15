@@ -49,3 +49,7 @@
       border: 1px solid ;
       border-radius: 2px;
   }
+  .singleItem{
+    display: inline-flex;
+    align-items: center;
+  }

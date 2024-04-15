@@ -60,3 +60,51 @@
   .user_page{
     width: 100%;
   }
+
+
+  .user_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .user_info label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 250px;
+  }
+  
+  .user_info input[type="text"] {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .user_submit,
+  .user_cancel {
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    width: 100px;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+  
+  .user_submit {
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text color */
+  }
+  
+  .user_cancel {
+    background-color: #dc3545; /* Red background */
+    color: #fff; /* White text color */
+  }
+  
+  .user_submit:hover,
+  .user_cancel:hover {
+    opacity: 0.8; /* Reduce opacity on hover */
+  }

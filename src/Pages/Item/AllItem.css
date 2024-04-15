@@ -32,3 +32,17 @@
     align-items: center;
     width: 100%;
   }
+  .item_edit_button {
+    cursor: pointer;
+    padding: 8px 16px;
+    background-color: #3c2b4b; /* Blue background */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+  }
+  
+  .item_edit_button:hover {
+    background-color: #404b57; /* Darker blue background on hover */
+  }
+  

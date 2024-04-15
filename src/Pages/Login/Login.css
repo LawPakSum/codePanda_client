@@ -18,18 +18,21 @@
 .left{
     flex: 1;
     display: flex;
-    justify-content: center; /* Horizontal centering */
-    align-items:flex-start; /* Vertical centering */
+    justify-content: center;
+    /* Horizontal centering */
+    align-items: flex-start;
+    /* Vertical centering */
     flex-direction: column;
-    padding-left:2%
+    padding-left: 2%
 }
 
 .welcome_message {
-    color: rgb(172, 108, 255); /* Change the color of the title to purple */
+    color: #4f46a5;    /* Change the color of the title to purple */
 }
-  
+
 .login_guide {
-    font-size: 15px; /* Adjust the font size to make it smaller */ 
+    font-size: 15px;
+    /* Adjust the font size to make it smaller */
     padding-bottom: 5px;
 }
 
@@ -40,23 +43,38 @@
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 5px;
-    text-align: center; /* Center align text */
+    text-align: center;
+    /* Center align text */
     /* Additional styles to center text vertically */
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px; /* Adjust the width of the button */
-  }
-  
-  .login_button:hover {
+    width: 300px;
+    /* Adjust the width of the button */
+    margin-top: 20px;
+    letter-spacing: 1px;
+}
+
+.login_button:hover {
     background: linear-gradient(to right, #e435b6 0%, #0174c1 100%);
     color: #fff;
     border-radius: 5px;
     font-weight: bolder;
-  }
+}
 
-  .login_container input {
+.login_container input {
     padding: 10px 20px;
-    width: 300px; /* Adjust the width of the input fields */
-  }
-  
+    width: 300px;
+    /* Adjust the width of the input fields */
+}
+
+.form-field {
+    height: 46px;
+    padding: 0 16px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Rubik', sans-serif;
+    outline: 0;
+    transition: .2s;
+    margin-top: 20px;
+}

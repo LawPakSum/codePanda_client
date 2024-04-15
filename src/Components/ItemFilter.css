@@ -15,7 +15,7 @@
 .filter input[type="text"],
 .filter input[type="radio"],
 .filter select {
-  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .filter label {

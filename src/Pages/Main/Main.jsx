@@ -13,17 +13,17 @@ function Main() {
         <button>Learn More</button>
       </div>
 
-      <div class="userRow list1">
+      <div class=" list1">
         <div class="row">
           <h4 class="users_create">Create History List</h4>
         </div>
         <div class="users_lists">
 
-        </div><div class="userRow">
+        </div><div class="">
           <div class="userRow_detail">
-          </div></div><div class="userRow">
+          </div></div><div class="">
           <div class="userRow_detail">
-          </div></div><div class="userRow">
+          </div></div><div class="">
           <div class="userRow_detail">
           </div></div><table>
           <thead>

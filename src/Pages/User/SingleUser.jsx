@@ -27,7 +27,7 @@ function SingleUser() {
     //     },[])
     //   },[])
   return (
-    <div>
+    <div className='main_body'>
         <div className='user_info'>
             {/* {exist?<div>User Id: {props.user.user_id}</div>:""} */}
             <label>User Name:<input type="text" value={name} onChange={(e)=>{setName(e.target.value)}}/></label>
