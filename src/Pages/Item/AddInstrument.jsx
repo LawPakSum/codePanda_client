@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
 import {addInstrument} from '../../Hooks/InstrumentHook';
-import {useLocation, useNavigate} from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 
 
 function AddInstrument() {
-  const navigate = new useNavigate();
     const location = useLocation();
     var uploader = () => {
       const instruemnt = {
@@ -38,7 +37,6 @@ function AddInstrument() {
         <div className='singleItem_buttonSet'>
           <div className='singleItem_submit' onClick={()=>{
             uploader();
-            navigate("/items");
           }}>Submit</div>
           <div className='singleItem_cancel'>Cancel</div>
         </div>
