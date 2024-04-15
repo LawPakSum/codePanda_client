@@ -1,0 +1,34 @@
+.items_page {
+    width: 80%; /* Adjust width as needed */
+    margin-top: 20px; /* Add space above the items */
+  }
+  
+  .single_item {
+    background-color: #6495ED; /* Set background color to blue */
+    padding: 10px; /* Add padding for spacing */
+    margin-bottom: 20px; /* Add space between items */
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px;
+  }
+  
+  .item_borrow_button {
+    background-color: #4682B4; /* Set background color to darker blue for the borrow button */
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .item_borrow_button:hover {
+    background-color: #357ABD; /* Darken the color on hover */
+  }
+
+  .main_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }

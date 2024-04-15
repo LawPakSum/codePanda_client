@@ -3,6 +3,7 @@ import RecordRow from '../../Components/RecordRow';
 import  {createRecord} from '../../Hooks/RecordHook';
 import axios from 'axios';
 import RecordFilter from '../../Components/RecordFilter';
+import { useNavigate } from 'react-router-dom';
 
 function AdminRecord() {
 
@@ -11,6 +12,7 @@ function AdminRecord() {
   const [bookingId, setBookingId] = useState('');
   const [instrumentBookings, setInstrumentBookings] = useState([]);
   const [filterRecord, setFilterRecord] = useState([]);
+  const navigate = new useNavigate();
 
   const [filter, setFilter] = useState({
     getTime:"",
@@ -99,7 +101,10 @@ function AdminRecord() {
                 }
               </select>
             </label>
-            <div onClick={cRecord}>create</div>    
+            <div onClick={()=>{
+              cRecord()
+              window.location.reload();          
+            }}>create</div>    
           </div>
           
             <div className='records_items'>

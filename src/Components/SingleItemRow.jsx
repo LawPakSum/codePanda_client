@@ -5,7 +5,7 @@ function SingleItemRow(props) {
   return (
     <div className='singleItem'>
       <div className='singleItem_icon'></div>
-      <div >
+      <div>
         <div className='singleItem_name'>Name: {info.instrument_name}a</div>
         <div>
           <div className='singleItem_classification'>Classification: {info.instrument_classification}</div>

@@ -1,0 +1,37 @@
+.header_bar{
+    width: 100vw;
+    height: 5vh;
+    position: absolute;
+    background: #002041;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation{
+    background: #013062;
+    width: 10vw;
+    padding-top: 10vh;
+}
+.navigation_single_choice {
+    color: white; /* Set text color to white */
+    text-decoration: none; /* Remove underline */
+    margin: 10px 0;
+  }
+  
+  .navigation_single_choice:hover {
+    text-decoration: none; /* Remove underline on hover */
+  }
+  .navigation_choices {
+    text-align: center; /* Center align text horizontally */
+  }
+  
+  .navigation_single_choice:hover {
+    color: #808080; /* Change text color to grey on hover */
+    text-decoration: none; /* Remove underline on hover */
+  }
+
+.main_body{
+    padding-top: 10vh;
+}

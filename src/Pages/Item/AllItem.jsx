@@ -3,7 +3,7 @@ import SingleItemRow from '../../Components/SingleItemRow';
 import ItemFilter from '../../Components/ItemFilter';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-
+import "./AllItem.css";
 function AllItem() {
 
   const [items, setItems] = useState([]);
@@ -45,8 +45,10 @@ function AllItem() {
   },[]);
 
   return (
-    <div>
-      <ItemFilter updateFilter={updateFilter}></ItemFilter>
+    <div className='main_body'>
+      <div className='filter'>
+        <ItemFilter updateFilter={updateFilter}></ItemFilter>
+      </div>
       <div className='items_page page_main'>
         <div className='items'>
           {
@@ -54,6 +56,7 @@ function AllItem() {
               let info = {
                 instrument_name: item.instrument_name,
                 instrument_playstyle: item.instrument_playstyle,
+                instrument_classification: item.instrument_classification,
                 instrument_borrow_status: item.instrument_borrow_status,
                 instrument_condition: item.instrument_condition,
                 instrument_remark: item.instrument_remark,

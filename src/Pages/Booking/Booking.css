@@ -1,0 +1,28 @@
+.main_body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .waiting_page {
+    width: 80%; /* Adjust width as needed */
+    margin-top: 20px; /* Add space above the waiting items */
+  }
+  
+  .waiting_single_item {
+    background-color: #6495ED; /* Set background color to blue */
+    padding: 10px; /* Add padding for spacing */
+    margin-bottom: 20px; /* Add space between items */
+  }
+  
+  .waiting_item_giveup_button {
+    background-color: #4682B4; /* Set background color to darker blue for the cancel button */
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .waiting_item_giveup_button:hover {
+    background-color: #357ABD; /* Darken the color on hover */
+  }

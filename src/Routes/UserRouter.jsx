@@ -8,10 +8,11 @@ import Booking from '../Pages/Booking/Booking';
 import Logout from '../Pages/Login/Logout';
 import SingleItem from '../Pages/Item/SingleItem';
 import CreateBooking from '../Pages/Booking/CreateBooking';
-
+import './User.css'
 function UserRouter() {
   return (
     <Router>
+      <div className='header_bar'>Code Panda</div>
       <UserHeader></UserHeader>
       <Routes>
         <Route path='/home' element={<Main/>}/>

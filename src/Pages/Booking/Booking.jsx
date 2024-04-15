@@ -4,7 +4,11 @@ import BookingRow from '../../Components/BookingRow';
 import {cancelBooking} from '../../Hooks/BookingHook'
 import axios from 'axios';
 import BookingFilter from '../../Components/BookingFilter';
+import { useCookies } from 'react-cookie';
+import "./Booking.css"
+
 function Booking() {
+  const [cookies, setCookie, removeCookie] = useCookies();
   const [instrumentBookings, setInstrumentBookings] = useState([]);
   const [filterItems, setFilterItems] = useState([]);
   // for filter
@@ -64,7 +68,7 @@ function Booking() {
   //end filter
 
   useEffect(()=>{
-    let userId = 2;
+    let userId = cookies.user_id;
     let bookingUrl = process.env.REACT_APP_SERVER_URL+"/getBookingByUser";
     axios.post(bookingUrl, {
       user_id:userId
@@ -76,9 +80,11 @@ function Booking() {
     })
   },[])
   return (
-    <div>
+    <div className='main_body'>
+      <div className='filter'>
       <ItemFilter updateFilter={updateFilter}></ItemFilter>
       <BookingFilter updateBookingFilter={updateBookingFilter}></BookingFilter>
+      </div>
       <div className='waiting_page page_main'>
         <div className='waiting_items'>
           {

@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import RecordRow from '../../Components/RecordRow';
 import axios from 'axios';
 import RecordFilter from '../../Components/RecordFilter';
-
+import { useCookies } from 'react-cookie';
+import "./Record.css"
 function Record() {
-
+  const [cookies, setCookie, removeCookie] = useCookies();
   const [records, setRecords] = useState([]);
   const [filterRecord, setFilterRecord] = useState([]);
   const [filter, setFilter] = useState({
@@ -38,7 +39,7 @@ function Record() {
 
   useEffect(()=>{
     const itemUrl = process.env.REACT_APP_SERVER_URL+"/getRecordInfo";
-    let userId = 2;
+    let userId = cookies.user_id;
     axios.get(itemUrl).then((response)=>{
       var targetRecords = [];
       response.data.map((record)=>{
@@ -54,8 +55,11 @@ function Record() {
   },[])
 
   return (
-    <div>
+    <div className='main_body'>
+      <div className='filter'>
         <RecordFilter updateRecordFilter={updateRecordFilter}></RecordFilter>
+      </div>
+        
         <div className='records_page page_main'>
             <div className='records_items'>
               {
