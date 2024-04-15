@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import UserFilter from '../../Components/UserFilter';
 import UserRow from '../../Components/UserRow';
 import {useNavigate} from "react-router-dom"
+import "./User.css"
 function User() {
     const navigate = new useNavigate();
     const [users, setUsers] = useState([]);
@@ -37,7 +38,7 @@ function User() {
  
 
   return (
-    <div>
+    <div className='main_body'>
         <UserFilter updateFilter={updateFilter}></UserFilter>
         <div className='user_page page_main'>
             <div className='users_create' onClick={()=>{

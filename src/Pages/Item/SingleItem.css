@@ -1,0 +1,51 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+  }
+  
+  .form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Add spacing between rows */
+  }
+  
+  .form-row label {
+    margin-right: 10px; /* Add spacing between label and input */
+  }
+  
+  .singleItem_buttonSet {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px; /* Add spacing between button set and form */
+  }
+  
+  .singleItem_buttonSet > div {
+    cursor: pointer;
+  }
+  
+  /* Additional styles for buttons */
+  .singleItem_submit,
+  .singleItem_cancel {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .singleItem_submit:hover,
+  .singleItem_cancel:hover {
+    background-color: #0056b3;
+  }
+  
+  .new_ins_row{
+      display: block;
+  }
+
+  .new_ins_row >input{
+      border: 1px solid ;
+      border-radius: 2px;
+  }

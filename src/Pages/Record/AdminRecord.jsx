@@ -4,6 +4,7 @@ import  {createRecord} from '../../Hooks/RecordHook';
 import axios from 'axios';
 import RecordFilter from '../../Components/RecordFilter';
 import { useNavigate } from 'react-router-dom';
+import "./AdminRecord.css";
 
 function AdminRecord() {
 
@@ -101,7 +102,7 @@ function AdminRecord() {
                 }
               </select>
             </label>
-            <div onClick={()=>{
+            <div className='create_button' onClick={()=>{
               cRecord()
               window.location.reload();          
             }}>create</div>    

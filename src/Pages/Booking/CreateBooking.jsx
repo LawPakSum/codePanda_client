@@ -84,7 +84,7 @@ function CreateBooking() {
   }
 
   return (
-    <div>
+    <div className="main_body">
       <DatePicker selected={startDate} onChange={
         (date) => {
           setStartDate(date.toJSON().split("T")[0]);

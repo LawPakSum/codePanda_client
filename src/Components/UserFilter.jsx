@@ -19,7 +19,7 @@ function UserFilter({ updateFilter }) {
     <div>
       <div className='userFilter'>
         <div className='userFilter_id'><input type="text" name="id" value={filters.id} onChange={handleFilterChange} /></div>
-        <div className='userFilter_name'><input type="text" name="name" value={filters.name} onChange={handleFilterChange} /></div>
+        <div className='userFilter_name'>User name:<input type="text" name="name" value={filters.name} onChange={handleFilterChange} /></div>
       </div>
     </div>
   );

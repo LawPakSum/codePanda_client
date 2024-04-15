@@ -16,7 +16,7 @@ function AdminRouter() {
     <Router>
       <AdminHeader></AdminHeader>
       <Routes>        
-        <Route path='/home' element={<Main/>}/>
+        <Route path='/' element={<Main/>}/>
         <Route path='/users' element={<User/>}/>
         <Route path='/items' element={<AdminAllItem/>}/>
         <Route path='/records' element={<AdminALlRecord/>}/>

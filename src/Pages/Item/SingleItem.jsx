@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {addInstrument, deleteInstrument, updateInstrument} from '../../Hooks/InstrumentHook';
 import {useLocation} from 'react-router-dom';
+import "./SingleItem.css"
 
 function SingleItem() {
 
@@ -33,14 +34,14 @@ function SingleItem() {
   const [condition, setCondition] = useState(location.state.instrument.instrument_condition);
   const [remark, setRemark] = useState(location.state.instrument.instrument_remark);
   return (
-    <div>
+    <div className='main_body'>
       {existed?<div>Instrument Id: {location.state.instrument.instrument_id}</div>:""}
-      <label>Instrument Name:<input type='text' value={name} onChange={(e)=>{setName(e.target.value)}}/></label>
-      <label>Instrument Classification: <input type='text' value={classification} onChange={(e)=>{setClassification(e.target.value)}}/></label>
-      <label>Instrument play style: <input type='text' value={playStyle} onChange={(e)=>{setPlayStyle(e.target.value)}}/></label>
-      <label>Instrument Borrow Status: <input type='text' value={borrowStatus} onChange={(e)=>{setBorrowStatus(e.target.value)}}/></label>
-      <label>Instrument Condition: <input type='text' value={condition} onChange={(e)=>{setCondition(e.target.value)}}/></label>
-      <label>Instrument Remark: <input type='text' value={remark} onChange={(e)=>{setRemark(e.target.value)}}/></label>
+      <label className='new_ins_row'>Instrument Name:<input type='text' value={name} onChange={(e)=>{setName(e.target.value)}}/></label>
+      <label className='new_ins_row'>Instrument Classification: <input type='text' value={classification} onChange={(e)=>{setClassification(e.target.value)}}/></label>
+      <label className='new_ins_row'>Instrument play style: <input type='text' value={playStyle} onChange={(e)=>{setPlayStyle(e.target.value)}}/></label>
+      <label className='new_ins_row'>Instrument Borrow Status: <input type='text' value={borrowStatus} onChange={(e)=>{setBorrowStatus(e.target.value)}}/></label>
+      <label className='new_ins_row'>Instrument Condition: <input type='text' value={condition} onChange={(e)=>{setCondition(e.target.value)}}/></label>
+      <label className='new_ins_row'>Instrument Remark: <input type='text' value={remark} onChange={(e)=>{setRemark(e.target.value)}}/></label>
       <div className='singleItem_buttonSet'>
         <div className='singleItem_submit' onClick={()=>{uploader(location.state.order)}}>Submit</div>
         <div className='singleItem_cancel'>Cancel</div>

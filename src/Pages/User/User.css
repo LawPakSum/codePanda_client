@@ -1,0 +1,62 @@
+/* Styling for create button */
+.users_create {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth transition effect */
+  }
+  
+  .users_create:hover {
+    background-color: #000;
+    color: #fff; /* Change text color on hover */
+  }
+  
+  /* Styling for user list */
+  .users_list {
+    margin-top: 20px; /* Add space between create button and user list */
+  }
+  
+  /* Styling for each user element */
+  .userRow {
+    background-color: #007bff; /* Blue background color */
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px; /* Add space between user elements */
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .userRow:hover {
+    background-color: #0056b3; /* Darker background color on hover */
+    color: #fff; /* Change text color on hover */
+  }
+  
+  /* Styling for user details */
+  .userRow_detail {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .userRow_id,
+  .userRow_name,
+  .userRow_identity {
+    margin-bottom: 5px; /* Add space between user details */
+  }
+  
+  /* Styling for user details labels */
+  .userRow_id::before,
+  .userRow_name::before,
+  .userRow_identity::before {
+    content: attr(data-label);
+    font-weight: bold;
+    margin-right: 5px; /* Add space between label and value */
+  }
+  
+  .user_page{
+    width: 100%;
+  }
