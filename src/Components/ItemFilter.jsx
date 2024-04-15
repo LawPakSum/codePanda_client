@@ -18,13 +18,14 @@ function ItemFilter({updateFilter}) {
   return (
     <div className='filter'>
        <div>
-        <div className='itemFilter_id'>
-          <input type="text" name="id" value={filters.id} onChange={handleFilterChange} />
-        </div>
+        {/* <div className='itemFilter_id'>
+          Instrument Id:<input type="text" name="id" value={filters.id} onChange={handleFilterChange} />
+        </div> */}
         <div className='itemFilter_name'>
-          <input name="name" value={filters.name} onChange={handleFilterChange} />
+          Instrumenr Name:<input name="name" value={filters.name} onChange={handleFilterChange} />
         </div>
         <div className='itemFilter_classification'>
+          Classification:
           <input
             type="radio"
             name="classification"
@@ -48,6 +49,7 @@ function ItemFilter({updateFilter}) {
           />Chinese
         </div>
         <div className='itemFilter_borrow_status'>
+          Borrow Status:
           <input
             type="radio"
             name="borrowStatus"
@@ -71,8 +73,9 @@ function ItemFilter({updateFilter}) {
           />Out
         </div>
         <div className='itemFilter_playstyle'>
+          Play Style:
           <select name="playstyle" value={filters.playstyle} onChange={handleFilterChange}>
-            <option value="all">All</option>
+            <option value="">All</option>
             <option value="String">String</option>
             <option value="woodwind">woodwind</option>
             <option value="brass">brass</option>

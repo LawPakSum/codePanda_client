@@ -52,6 +52,7 @@ function AdminRecord() {
         targetRecords.push(record);
       })
       setRecords(targetRecords);
+      //add for filter
       setFilterRecord(targetRecords)
     },[]).catch((error)=>{
       console.log(error);

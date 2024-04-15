@@ -4,6 +4,7 @@ import BookingRow from '../../Components/BookingRow';
 import {cancelBooking} from '../../Hooks/BookingHook'
 import axios from 'axios';
 import BookingFilter from '../../Components/BookingFilter';
+import './AdminBooking.css';
 function AdminBooking() {
   const [instrumentBookings, setInstrumentBookings] = useState([]);
   const [filterItems, setFilterItems] = useState([]);

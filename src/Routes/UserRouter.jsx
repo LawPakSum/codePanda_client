@@ -7,7 +7,7 @@ import Record from '../Pages/Record/Record';
 import Booking from '../Pages/Booking/Booking';
 import Logout from '../Pages/Login/Logout';
 import SingleItem from '../Pages/Item/SingleItem';
-import User from '../Pages/User/User';
+import CreateBooking from '../Pages/Booking/CreateBooking';
 
 function UserRouter() {
   return (
@@ -32,7 +32,7 @@ function UserRouter() {
           }
           order={"add"}
         />}/>
-        <Route path='/users' element={<User/>}/>
+        <Route path='/createBooking' element={<CreateBooking/>}/>
       </Routes>
     </Router>
   );

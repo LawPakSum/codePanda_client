@@ -19,23 +19,23 @@ function BookingFilter({updateBookingFilter}) {
   return (
     <div className='filter'>
       <div>
-        <div className='bookingFilter_id'>
+        {/* <div className='bookingFilter_id'>
           <input type="text" name="book_id" value={filters.book_id} onChange={handleFilterChange} />
-        </div>
-        <div className='bookingFilter_bookingFrom'>
+        </div> */}
+        <div className='bookingFilter_bookingFrom'> Booking From:
           <input type="date" name="bookingFrom" value={filters.bookingFrom} onChange={handleFilterChange} />
         </div>
-        <div className='bookingFilter_bookingTo'>
+        <div className='bookingFilter_bookingTo'> Booking To:
           <input type="date" name="bookingTo" value={filters.bookingTo} onChange={handleFilterChange} />
         </div>
-        <div className='bookingFilter_bookingStatus'>
+        <div className='bookingFilter_bookingStatus'> Booking Status:
           <select name="bookingStatus" value={filters.bookingStatus} onChange={handleFilterChange}>
             <option value="">All</option>
             <option value="available">Available</option>
             <option value="cancel">Cancel</option>
           </select>
         </div>
-        <div className='bookingFilter_picked'>
+        <div className='bookingFilter_picked'> Picked:
           <select name="picked" value={filters.picked} onChange={handleFilterChange}>
             <option value="">All</option>
             <option value="yes">Yes</option>

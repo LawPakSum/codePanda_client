@@ -1,17 +1,25 @@
 import axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 function makeBooking(user_id, instrument_id, booking_from, booking_to){
+    const navigate = new useNavigate();
+
     let makeBookingUrl = process.env.REACT_APP_SERVER_URL+"/addBooking";
     let booking = {
         userId: user_id,
         instrument_id: instrument_id,
-        booking_from: booking_from.toJSON(),
-        booking_to: booking_to.toJSON(),
+        booking_from: booking_from,
+        booking_to: booking_to,
         booking_status: "available"
     }
+    console.log(booking);
     axios.post(makeBookingUrl, {
         booking
-    }).catch((error)=>{
+    }).then((response)=>{
+        alert("book success");
+        navigate("/items");
+    })
+    .catch((error)=>{
         console.log(error);
     })
 }

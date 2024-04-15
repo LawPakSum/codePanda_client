@@ -1,4 +1,5 @@
 import axios from "axios"
+import { useNavigate } from 'react-router-dom';
 
 function createRecord(booking_id){
     
@@ -18,6 +19,9 @@ function createRecord(booking_id){
 function returnItem(record_id){
     const returnItemUrl = process.env.REACT_APP_SERVER_URL+"/updateReturn";
     axios.post(returnItemUrl, {record_id: record_id}).catch((error)=>{console.log(error)});
+    alert("return successfully")
+    const navigate = new useNavigate();
+    navigate("/records")
 }
 
 export {createRecord, returnItem};
