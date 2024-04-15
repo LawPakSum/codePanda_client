@@ -14,7 +14,7 @@ function RecordFilter({updateRecordFilter}) {
       updateRecordFilter(updatedFilters); // Pass the updated filters to the updateRecordFilter function
     };
   return (
-    <div>
+    <div className='filter'>
         <label htmlFor="GetTime">Get Time:</label>
         <input
         type="date"

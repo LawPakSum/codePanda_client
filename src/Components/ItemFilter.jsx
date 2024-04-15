@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import "./ItemFilter.css";
 function ItemFilter({updateFilter}) {
   const [filters, setFilters] = useState({
     id: '',
@@ -17,7 +17,7 @@ function ItemFilter({updateFilter}) {
   };
   return (
     <div className='filter'>
-       <div>
+       <div className='filter_row'>
         {/* <div className='itemFilter_id'>
           Instrument Id:<input type="text" name="id" value={filters.id} onChange={handleFilterChange} />
         </div> */}

@@ -18,7 +18,7 @@ function BookingFilter({updateBookingFilter}) {
     
   return (
     <div className='filter'>
-      <div>
+      <div className='filter_row'>
         {/* <div className='bookingFilter_id'>
           <input type="text" name="book_id" value={filters.book_id} onChange={handleFilterChange} />
         </div> */}

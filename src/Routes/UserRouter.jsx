@@ -15,7 +15,7 @@ function UserRouter() {
       <div className='header_bar'>Code Panda</div>
       <UserHeader></UserHeader>
       <Routes>
-        <Route path='/home' element={<Main/>}/>
+        <Route path='/' element={<Main/>}/>
         <Route path='/items' element={<AllItem/>}/>
         <Route path='/records' element={<Record/>}/>
         <Route path='/booking' element={<Booking/>}/>

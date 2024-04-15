@@ -6,7 +6,7 @@ function BookingRow(props) {
   return (
     <div className='bookRow'>
         <div className='bookRow_icon'></div>
-        <div>
+        <div >
             <div>
                 <div className='bookRow_name'></div>
             </div>

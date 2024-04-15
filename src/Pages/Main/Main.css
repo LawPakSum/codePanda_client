@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: rgb(255, 255, 255);
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxTQUFTO0VBQ1Q7O2NBRVk7RUFDWixtQ0FBbUM7RUFDbkMsa0NBQWtDO0FBQ3BDOztBQUVBO0VBQ0U7YUFDVztBQUNiIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gIG1hcmdpbjogMDtcbiAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgJ1JvYm90bycsICdPeHlnZW4nLFxuICAgICdVYnVudHUnLCAnQ2FudGFyZWxsJywgJ0ZpcmEgU2FucycsICdEcm9pZCBTYW5zJywgJ0hlbHZldGljYSBOZXVlJyxcbiAgICBzYW5zLXNlcmlmO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcbn1cblxuY29kZSB7XG4gIGZvbnQtZmFtaWx5OiBzb3VyY2UtY29kZS1wcm8sIE1lbmxvLCBNb25hY28sIENvbnNvbGFzLCAnQ291cmllciBOZXcnLFxuICAgIG1vbm9zcGFjZTtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */
+
+.App {
+    display: flex;
+    flex-direction: row;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9BcHAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBYTtFQUNiLG1CQUFtQjtBQUNyQjs7QUFFQTtFQUNFLGFBQWE7RUFDYixzQkFBc0I7QUFDeEIiLCJzb3VyY2VzQ29udGVudCI6WyIuQXBwe1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogcm93O1xufVxuXG4ubmF2aWdhdGlvbiwgLm5hdmlnYXRpb25fY2hvaWNlc3tcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbn0iXSwic291cmNlUm9vdCI6IiJ9 */
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 20px;
+    background: #002041;
+    color: #fff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo a {
+    color: #fff;
+    display: flex;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 2rem 8rem 2rem 2rem;
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.header-icons i {
+    margin-right: 2rem;
+    cursor: pointer;
+}
+
+.header-icons .account {
+    width: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-icons .account img {
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.container {
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Side menubar section */
+nav {
+    background: #013062;
+}
+
+.side_navbar {
+    padding: 1px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+
+}
+
+.side_navbar span {
+    color: gray;
+    margin: 1rem 3rem;
+    font-size: 12px;
+    color: #fff;
+
+}
+
+.side_navbar a {
+    width: 100%;
+    padding: 0.8rem 3rem;
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(100, 100, 100);
+    color: #fff;
+
+}
+
+.side_navbar a:hover {
+    background: rgb(235, 235, 235);
+    color: rgb(100, 100, 100);
+
+}
+
+.side_navbar .active {
+    border-left: 2px solid rgb(100, 100, 100);
+}
+
+/* Main Body Section */
+.main-body {
+     margin-top: 5vh;
+    width: 70%;
+    padding: 2rem;
+}
+
+.promo_card {
+    width: 100%;
+    color: #fff;
+    margin-top: 10px;
+    border-radius: 8px;
+    padding: 0.5rem 1rem 1rem 3rem;
+    background: #4f46a5;
+}
+
+.promo_card h1,
+.promo_card span,
+button {
+    margin: 10px 10px 30px 0px;
+    text-align: justify;
+}
+
+.promo_card button {
+    display: block;
+    padding: 6px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.users_lists {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+table {
+    background: #cfe8f9;
+    padding: 1rem;
+    text-align: left;
+    border-radius: 10px;
+}
+
+table td,
+th {
+    padding: 0.2rem 0.8rem;
+}
+
+table th {
+    font-size: 15px;
+}
+
+table td {
+    font-size: 13px;
+    color: rgb(100, 100, 100);
+}
+
+/* Sidebar Section */
+.sidebar {
+    width: 15%;
+    padding: 2rem 1rem;
+    background: #cfe8f9;
+}
+
+.sidebar h4 {
+    margin-bottom: 1.5rem;
+}
+
+.sidebar .balance {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.balance .icon {
+    color: #fff;
+    font-size: 20px;
+    border-radius: 6px;
+    margin-right: 1rem;
+    padding: 1rem;
+    background: #4f46a5;
+}
+
+.balance .info h5 {
+    font-size: 16px;
+}
+
+.balance .info span {
+    font-size: 14px;
+    color: rgb(103, 82, 82);
+}
+
+.balance .info i {
+    margin-right: 2px;
+}

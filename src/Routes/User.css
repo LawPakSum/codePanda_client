@@ -17,7 +17,7 @@
 .navigation_single_choice {
     color: white; /* Set text color to white */
     text-decoration: none; /* Remove underline */
-    margin: 10px 0;
+    padding: 10px 0;
   }
   
   .navigation_single_choice:hover {
@@ -30,6 +30,7 @@
   .navigation_single_choice:hover {
     color: #808080; /* Change text color to grey on hover */
     text-decoration: none; /* Remove underline on hover */
+    background-color: white;
   }
 
 .main_body{
