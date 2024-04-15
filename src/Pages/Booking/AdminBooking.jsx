@@ -62,7 +62,6 @@ function AdminBooking() {
     setFilterItems(temp)
   }, [filters])
 
-
   //end filter
   useEffect(()=>{
     let bookingUrl = process.env.REACT_APP_SERVER_URL+"/getBookingByUsers";

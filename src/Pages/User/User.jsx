@@ -2,8 +2,9 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import UserFilter from '../../Components/UserFilter';
 import UserRow from '../../Components/UserRow';
+import {useNavigate} from "react-router-dom"
 function User() {
-
+    const navigate = new useNavigate();
     const [users, setUsers] = useState([]);
     const [filters, setFilters] = useState({
         id:"",
@@ -39,7 +40,9 @@ function User() {
     <div>
         <UserFilter updateFilter={updateFilter}></UserFilter>
         <div className='user_page page_main'>
-            <div className='users_create'>create</div>
+            <div className='users_create' onClick={()=>{
+                navigate("/singleUser")
+            }}>create</div>
             <div className='users_list'>
                 {
                     filterUsers.map((user, index)=>{

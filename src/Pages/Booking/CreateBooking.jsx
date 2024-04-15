@@ -66,13 +66,13 @@ function CreateBooking() {
         "booking_to": new Date(booking_to).toJSON(),
         "booking_status": "available"
     }
-    console.log(booking);
     axios.post(makeBookingUrl, {
       "userId": user_id,
       "instrument_id": instrument_id,
       "booking_from": new Date(booking_from).toJSON(),
       "booking_to": new Date(booking_to).toJSON(),
-      "booking_status": "available"
+      "booking_status": "available",
+      "picked":"no"
     }).then((response)=>{
       console.log(response.data);
         alert("book success");

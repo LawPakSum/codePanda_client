@@ -24,6 +24,7 @@ function AdminRouter() {
         <Route path='/logout' element={<Logout/>}/>
         <Route path='/addItem' element={<AddInstrument/>}/>
         <Route path='/singleItem' element={<SingleItem/>}/>
+        <Route path='/singleUser' element ={<SingleUser/>}/>
 
       </Routes>
     </Router>
