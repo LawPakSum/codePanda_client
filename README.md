@@ -1,4 +1,5 @@
-In the directory: codePanda_client, insert command "npm install"
-do npm start to run.
-**run this after the MySQL database is set up and the Spring boot program is running
-**make sure no application using port 3000
+In the directory: codePanda_client, please insert the command **"npm install"** and do **"npm start"** to run.
+
+**Please Run this after the MySQL database is set up and the Spring boot program is running**
+
+**Please Make sure no application using port 3000**
